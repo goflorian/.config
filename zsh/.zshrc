@@ -1,3 +1,4 @@
+alias v='nvim'
 # Set up the prompt
 
 autoload -Uz promptinit
