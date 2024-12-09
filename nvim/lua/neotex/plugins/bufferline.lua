@@ -1,6 +1,7 @@
 return {
   "akinsho/bufferline.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  "famiu/bufdelete.nvim", -- Add this dependency
   version = "*",
   config = function()
     local bufferline = require('bufferline')

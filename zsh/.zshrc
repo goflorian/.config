@@ -1,6 +1,8 @@
-alias v='nvim'
-# Set up the prompt
+echo "using ~/.zshrc"
 
+alias v='nvim'
+
+# Set up the prompt
 autoload -Uz promptinit
 promptinit
 prompt adam1
@@ -36,3 +38,15 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/usr/local/bin"
+
+# active the venv, because pip cannot be installed on wsl. it needs a venv.
+# and this venv needs to be activated for nvr to be available
+# source /home/flo/.local/venv/bin/activate
+#
+
+#  add starship
+export STARSHIP_CONFIG=/home/flo/.config/starship/starship.toml
+eval "$(starship init zsh)"
+echo "ran starship init zsh"
